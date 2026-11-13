@@ -61,13 +61,13 @@
     <h1>Браузер без&nbsp;рекламы, с&nbsp;почтой и&nbsp;кошельком</h1>
     <p class="lead">Tabora убирает рекламу со&nbsp;страниц, запоминает пароли и&nbsp;сам подставляет коды входа. В&nbsp;нём есть почта с&nbsp;отдельным адресом для&nbsp;каждого сайта и&nbsp;кошелёк для&nbsp;криптовалюты. Доустанавливать ничего не&nbsp;нужно.</p>
     <div class="hero-actions">
-      <a class="capsule" href="/downloads/Tabora-0.2.0-mac-aarch64.dmg">
+      <a class="capsule" href="/downloads/Tabora-0.3.0-mac-aarch64.dmg">
         <span>Скачать для&nbsp;macOS</span>
         <span class="capsule-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v13"/><path d="m6.5 12.5 5.5 5.5 5.5-5.5"/></svg></span>
       </a>
       <a class="quiet-link" href="https://github.com/Tabora-App/browser">Исходный код на&nbsp;GitHub</a>
     </div>
-    <p class="hero-note">Бесплатно. Версия 0.2.0 для&nbsp;Mac с&nbsp;процессором Apple (M1 и&nbsp;новее).</p>
+    <p class="hero-note">Бесплатно. Версия 0.3.0 для&nbsp;Mac с&nbsp;процессором Apple (M1 и&nbsp;новее).</p>
   </div>
   <div class="stage" data-hero-stage role="img" aria-label="Знак Tabora: буква T, по перекладине которой катится лаймовый шар">
     <svg class="stage-fallback" viewBox="46 56 164 154" aria-hidden="true">
@@ -516,15 +516,15 @@ python3 tools/build.py run</code></pre>
       <div class="dl">
         <div class="dl-main">
           <h3>Mac с&nbsp;процессором Apple</h3>
-          <p>macOS&nbsp;11 или&nbsp;новее, процессоры M1 и&nbsp;новее. Версия 0.2.0. Бесплатно.</p>
-          <a class="capsule" href="/downloads/Tabora-0.2.0-mac-aarch64.dmg">
-            <span>Скачать .dmg, 127&nbsp;МБ</span>
+          <p>macOS&nbsp;11 или&nbsp;новее, процессоры M1 и&nbsp;новее. Версия 0.3.0. Бесплатно.</p>
+          <a class="capsule" href="/downloads/Tabora-0.3.0-mac-aarch64.dmg">
+            <span>Скачать .dmg, 129&nbsp;МБ</span>
             <span class="capsule-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v13"/><path d="m6.5 12.5 5.5 5.5 5.5-5.5"/></svg></span>
           </a>
         </div>
         <div class="dl-check">
           <h3>Контрольная сумма SHA-256</h3>
-          <code class="hash" id="dmg-sha">11c37f9cbe4ad5e33b3a097ab47f143bf16336ef7329eb9eb8856aaae1572d3e</code>
+          <code class="hash" id="dmg-sha">f2b337b46b3695e67140fb7b4c616b1e832299db3876d4a89101b253c352edac</code>
           <div class="dl-buttons">
             <button type="button" class="btn" data-copy="dmg-sha" data-copied="Скопировано" data-selected="Выделено, скопируйте вручную">Скопировать</button>
             <button type="button" class="btn" popovertarget="verify-help">Как&nbsp;проверить файл</button>
@@ -539,11 +539,11 @@ python3 tools/build.py run</code></pre>
         <ol>
           <li>
             <p>Посчитайте контрольную сумму и&nbsp;сравните с&nbsp;той, что&nbsp;на&nbsp;этой странице.</p>
-            <pre tabindex="0"><code>shasum -a 256 ~/Downloads/Tabora-0.2.0-mac-aarch64.dmg</code></pre>
+            <pre tabindex="0"><code>shasum -a 256 ~/Downloads/Tabora-0.3.0-mac-aarch64.dmg</code></pre>
           </li>
           <li>
             <p>Проверьте, что&nbsp;установщик заверен Apple.</p>
-            <pre tabindex="0"><code>spctl -a -vv -t install ~/Downloads/Tabora-0.2.0-mac-aarch64.dmg</code></pre>
+            <pre tabindex="0"><code>spctl -a -vv -t install ~/Downloads/Tabora-0.3.0-mac-aarch64.dmg</code></pre>
             <p>В&nbsp;ответе должно быть <code>Notarized Developer ID</code> и&nbsp;идентификатор команды <code>7YQU9YBJQ8</code>.</p>
           </li>
         </ol>
