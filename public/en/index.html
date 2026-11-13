@@ -182,6 +182,14 @@
               <dd>Codes from Google Authenticator, Aegis and 2FAS come over with a QR code. Passwords are imported as a file from another browser.</dd>
             </div>
             <div>
+              <dt>Passkeys instead of passwords</dt>
+              <dd>On sites that support passkeys you need no password: just confirm that it is you. Passkeys are kept next to your passwords.</dd>
+            </div>
+            <div>
+              <dt>A check for leaked passwords</dt>
+              <dd>The browser compares your passwords with a database of stolen ones and shows which to change. The passwords themselves never leave your computer.</dd>
+            </div>
+            <div>
               <dt>Only you know your password</dt>
               <dd>It’s never sent to our servers, so even we can’t open your passwords and codes.</dd>
             </div>
@@ -275,7 +283,7 @@
       <div class="part-grid">
         <div class="part-text">
           <h2>The same passwords and bookmarks on your second computer</h2>
-          <p class="part-lead">Sign in to your account on another computer, and your passwords, sign-in codes, bookmarks and open tabs show up there.</p>
+          <p class="part-lead">Sign in to your account on another computer, and your passwords, sign-in codes, bookmarks, history and the list of open tabs appear there.</p>
           <dl class="points">
             <div>
               <dt>Your data is encrypted before it’s sent</dt>
@@ -283,7 +291,11 @@
             </div>
             <div>
               <dt>You choose what to sync</dt>
-              <dd>Passwords, codes, bookmarks and tabs are each turned on separately. You can turn sync off and erase the copy from the server.</dd>
+              <dd>Passwords, passkeys, codes, bookmarks, tabs, history, addresses and settings are switched on one by one. Bank cards are synced only if you turn that on yourself. You can switch sync off and erase the copy from the server.</dd>
+            </div>
+            <div>
+              <dt>Send a page to another device</dt>
+              <dd>Found an article on one computer? Send it to another, and it opens there by itself.</dd>
             </div>
             <div>
               <dt>The wallet stays on your computer</dt>
@@ -306,6 +318,10 @@
               <li class="alias">
                 <div class="alias-main"><b>Bookmarks</b><span class="alias-meta">214 items</span></div>
                 <input type="checkbox" role="switch" class="switch" checked aria-label="Sync bookmarks">
+              </li>
+              <li class="alias">
+                <div class="alias-main"><b>History</b><span class="alias-meta">pages of the last two months</span></div>
+                <input type="checkbox" role="switch" class="switch" checked aria-label="Sync history">
               </li>
               <li class="alias">
                 <div class="alias-main"><b>Tabs and spaces</b><span class="alias-meta">see what’s open on your other computer</span></div>
@@ -428,12 +444,20 @@
           <dd>Tabs you haven’t returned to in a while can be put to sleep so they don’t take up memory.</dd>
         </div>
         <div>
+          <dt>Tab groups and two sites side by side</dt>
+          <dd>Tabs gather into groups with a name and a color. Two sites can be shown side by side in one window.</dd>
+        </div>
+        <div>
+          <dt>Moving from another browser</dt>
+          <dd>Bookmarks, history and passwords come over from Chrome, Safari, Edge and other browsers in a couple of clicks.</dd>
+        </div>
+        <div>
           <dt>Account protection</dt>
           <dd>You can protect sign-in with a second step (a code from an app) and add a backup email in case you forget your password.</dd>
         </div>
         <div>
-          <dt>Support right in the browser</dt>
-          <dd>Send a question or a bug report from settings, with a screenshot if you like. The reply arrives in the same place.</dd>
+          <dt>Support in the browser and on the web</dt>
+          <dd>Send a question or a bug report from the browser's settings or from <a href="https://support.tabora.app/">support.tabora.app</a>, with a screenshot if you like. On the site you can write even without an account.</dd>
         </div>
       </dl>
     </section>
@@ -533,6 +557,7 @@ python3 tools/build.py run</code></pre>
   <p>Tabora is a free, open-source browser built on the Firefox engine. Firefox is a trademark of the Mozilla Foundation; Tabora is not affiliated with or endorsed by Mozilla.</p>
   <ul>
     <li><a href="mailto:hello@tabora.app">hello@tabora.app</a></li>
+    <li><a href="https://support.tabora.app/">Support</a></li>
     <li><a href="https://github.com/Tabora-App/browser">GitHub</a></li>
     <li><a href="https://github.com/Tabora-App/browser/blob/main/LICENSE">MPL&nbsp;2.0 license</a></li>
   </ul>

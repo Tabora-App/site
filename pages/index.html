@@ -182,6 +182,14 @@
               <dd>Из&nbsp;Google Authenticator, Aegis и&nbsp;2FAS коды переезжают по&nbsp;QR-коду. Пароли загружаются файлом из&nbsp;другого браузера.</dd>
             </div>
             <div>
+              <dt>Ключи доступа вместо паролей</dt>
+              <dd>На&nbsp;сайтах, где есть вход по&nbsp;ключу доступа, пароль не&nbsp;нужен: достаточно подтвердить, что&nbsp;это вы. Ключи хранятся рядом с&nbsp;паролями.</dd>
+            </div>
+            <div>
+              <dt>Проверка паролей на&nbsp;утечки</dt>
+              <dd>Браузер сверит ваши пароли с&nbsp;базой украденных и&nbsp;покажет, какие пора сменить. Сами пароли при&nbsp;этом никуда не&nbsp;уходят.</dd>
+            </div>
+            <div>
               <dt>Ваш пароль знаете только вы</dt>
               <dd>Он&nbsp;не&nbsp;отправляется на&nbsp;наши серверы, поэтому открыть ваши пароли и&nbsp;коды не&nbsp;можем даже мы.</dd>
             </div>
@@ -275,7 +283,7 @@
       <div class="part-grid">
         <div class="part-text">
           <h2>Те&nbsp;же&nbsp;пароли и&nbsp;закладки на&nbsp;втором компьютере</h2>
-          <p class="part-lead">Войдите в&nbsp;свой аккаунт на&nbsp;другом компьютере, и&nbsp;там появятся ваши пароли, коды входа, закладки и&nbsp;список открытых вкладок.</p>
+          <p class="part-lead">Войдите в&nbsp;свой аккаунт на&nbsp;другом компьютере, и&nbsp;там появятся ваши пароли, коды входа, закладки, история и&nbsp;список открытых вкладок.</p>
           <dl class="points">
             <div>
               <dt>Данные шифруются до&nbsp;отправки</dt>
@@ -283,7 +291,11 @@
             </div>
             <div>
               <dt>Вы&nbsp;решаете, что&nbsp;переносить</dt>
-              <dd>Пароли, коды, закладки и&nbsp;вкладки включаются по&nbsp;отдельности. Синхронизацию можно выключить и&nbsp;стереть копию с&nbsp;сервера.</dd>
+              <dd>Пароли, ключи доступа, коды, закладки, вкладки, история, адреса и&nbsp;настройки включаются по&nbsp;отдельности. Банковские карты переносятся, только если вы&nbsp;сами это включите. Синхронизацию можно выключить и&nbsp;стереть копию с&nbsp;сервера.</dd>
+            </div>
+            <div>
+              <dt>Страницу можно отправить на&nbsp;другое устройство</dt>
+              <dd>Нашли статью на&nbsp;одном компьютере&nbsp;— отправьте её&nbsp;на&nbsp;другой, и&nbsp;она откроется там сама.</dd>
             </div>
             <div>
               <dt>Кошелёк остаётся на&nbsp;компьютере</dt>
@@ -306,6 +318,10 @@
               <li class="alias">
                 <div class="alias-main"><b>Закладки</b><span class="alias-meta">214 записей</span></div>
                 <input type="checkbox" role="switch" class="switch" checked aria-label="Синхронизировать закладки">
+              </li>
+              <li class="alias">
+                <div class="alias-main"><b>История</b><span class="alias-meta">страницы за&nbsp;два месяца</span></div>
+                <input type="checkbox" role="switch" class="switch" checked aria-label="Синхронизировать историю">
               </li>
               <li class="alias">
                 <div class="alias-main"><b>Вкладки и&nbsp;пространства</b><span class="alias-meta">видно, что&nbsp;открыто на&nbsp;другом компьютере</span></div>
@@ -428,12 +444,20 @@
           <dd>Вкладки, к&nbsp;которым вы&nbsp;давно не&nbsp;возвращались, можно усыплять, чтобы они не&nbsp;занимали память.</dd>
         </div>
         <div>
+          <dt>Группы вкладок и&nbsp;два сайта рядом</dt>
+          <dd>Вкладки собираются в&nbsp;группы с&nbsp;названием и&nbsp;цветом. Два сайта можно открыть рядом в&nbsp;одном окне.</dd>
+        </div>
+        <div>
+          <dt>Переезд из&nbsp;другого браузера</dt>
+          <dd>Закладки, история и&nbsp;пароли переносятся из&nbsp;Chrome, Safari, Edge и&nbsp;других браузеров за&nbsp;пару нажатий.</dd>
+        </div>
+        <div>
           <dt>Защита аккаунта</dt>
           <dd>Вход можно закрыть вторым шагом (кодом из&nbsp;приложения) и&nbsp;указать запасную почту на&nbsp;случай, если пароль забыт.</dd>
         </div>
         <div>
-          <dt>Поддержка прямо в&nbsp;браузере</dt>
-          <dd>Вопрос или&nbsp;сообщение об ошибке отправляется из&nbsp;настроек, можно приложить снимок экрана. Ответ приходит туда же.</dd>
+          <dt>Поддержка в&nbsp;браузере и&nbsp;на&nbsp;сайте</dt>
+          <dd>Вопрос или&nbsp;сообщение об ошибке отправляется из&nbsp;настроек браузера или&nbsp;с&nbsp;сайта <a href="https://support.tabora.app/">support.tabora.app</a>, можно приложить снимок экрана. На&nbsp;сайте написать можно и&nbsp;без&nbsp;аккаунта.</dd>
         </div>
       </dl>
     </section>
@@ -533,6 +557,7 @@ python3 tools/build.py run</code></pre>
   <p>Tabora&nbsp;— бесплатный браузер с&nbsp;открытым кодом на&nbsp;движке Firefox. Firefox&nbsp;— товарный знак Mozilla Foundation; Tabora не&nbsp;связан с&nbsp;Mozilla и&nbsp;не&nbsp;одобрен ею.</p>
   <ul>
     <li><a href="mailto:hello@tabora.app">hello@tabora.app</a></li>
+    <li><a href="https://support.tabora.app/">Поддержка</a></li>
     <li><a href="https://github.com/Tabora-App/browser">GitHub</a></li>
     <li><a href="https://github.com/Tabora-App/browser/blob/main/LICENSE">Лицензия MPL&nbsp;2.0</a></li>
   </ul>

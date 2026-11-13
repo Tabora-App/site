@@ -182,6 +182,14 @@
               <dd>З&nbsp;Google Authenticator, Aegis і&nbsp;2FAS коди переносяться через QR-код. Паролі завантажуються файлом з&nbsp;іншого браузера.</dd>
             </div>
             <div>
+              <dt>Ключі доступу замість паролів</dt>
+              <dd>На&nbsp;сайтах, де&nbsp;є&nbsp;вхід за&nbsp;ключем доступу, пароль не&nbsp;потрібен: досить підтвердити, що&nbsp;це&nbsp;ви. Ключі зберігаються поруч із&nbsp;паролями.</dd>
+            </div>
+            <div>
+              <dt>Перевірка паролів на&nbsp;витоки</dt>
+              <dd>Браузер звірить ваші паролі з&nbsp;базою викрадених і&nbsp;покаже, які час змінити. Самі паролі при&nbsp;цьому нікуди не&nbsp;йдуть.</dd>
+            </div>
+            <div>
               <dt>Ваш пароль знаєте лише ви</dt>
               <dd>Він не&nbsp;надсилається на&nbsp;наші сервери, тому відкрити ваші паролі й&nbsp;коди не&nbsp;можемо навіть ми.</dd>
             </div>
@@ -275,7 +283,7 @@
       <div class="part-grid">
         <div class="part-text">
           <h2>Ті&nbsp;самі паролі й&nbsp;закладки на&nbsp;другому комп’ютері</h2>
-          <p class="part-lead">Увійдіть у&nbsp;свій обліковий запис на&nbsp;іншому комп’ютері, і&nbsp;там з’являться ваші паролі, коди входу, закладки та&nbsp;список відкритих вкладок.</p>
+          <p class="part-lead">Увійдіть у&nbsp;свій обліковий запис на&nbsp;іншому комп’ютері, і&nbsp;там з’являться ваші паролі, коди входу, закладки, історія та&nbsp;список відкритих вкладок.</p>
           <dl class="points">
             <div>
               <dt>Дані шифруються перед надсиланням</dt>
@@ -283,7 +291,11 @@
             </div>
             <div>
               <dt>Ви&nbsp;вирішуєте, що&nbsp;переносити</dt>
-              <dd>Паролі, коди, закладки та&nbsp;вкладки вмикаються окремо. Синхронізацію можна вимкнути й&nbsp;стерти копію із&nbsp;сервера.</dd>
+              <dd>Паролі, ключі доступу, коди, закладки, вкладки, історія, адреси та&nbsp;налаштування вмикаються окремо. Банківські картки переносяться, лише якщо ви&nbsp;самі це&nbsp;ввімкнете. Синхронізацію можна вимкнути й&nbsp;стерти копію із&nbsp;сервера.</dd>
+            </div>
+            <div>
+              <dt>Сторінку можна надіслати на&nbsp;інший пристрій</dt>
+              <dd>Знайшли статтю на&nbsp;одному комп’ютері&nbsp;— надішліть її&nbsp;на&nbsp;інший, і&nbsp;вона відкриється там сама.</dd>
             </div>
             <div>
               <dt>Гаманець залишається на&nbsp;комп’ютері</dt>
@@ -306,6 +318,10 @@
               <li class="alias">
                 <div class="alias-main"><b>Закладки</b><span class="alias-meta">214 записів</span></div>
                 <input type="checkbox" role="switch" class="switch" checked aria-label="Синхронізувати закладки">
+              </li>
+              <li class="alias">
+                <div class="alias-main"><b>Історія</b><span class="alias-meta">сторінки за&nbsp;два місяці</span></div>
+                <input type="checkbox" role="switch" class="switch" checked aria-label="Синхронізувати історію">
               </li>
               <li class="alias">
                 <div class="alias-main"><b>Вкладки та&nbsp;простори</b><span class="alias-meta">видно, що&nbsp;відкрито на&nbsp;іншому комп’ютері</span></div>
@@ -428,12 +444,20 @@
           <dd>Вкладки, до&nbsp;яких ви&nbsp;давно не&nbsp;поверталися, можна присипляти, щоб вони не&nbsp;займали пам’ять.</dd>
         </div>
         <div>
+          <dt>Групи вкладок і&nbsp;два сайти поруч</dt>
+          <dd>Вкладки збираються в&nbsp;групи з&nbsp;назвою та&nbsp;кольором. Два сайти можна відкрити поруч в&nbsp;одному вікні.</dd>
+        </div>
+        <div>
+          <dt>Переїзд з&nbsp;іншого браузера</dt>
+          <dd>Закладки, історія та&nbsp;паролі переносяться з&nbsp;Chrome, Safari, Edge та&nbsp;інших браузерів за&nbsp;кілька натискань.</dd>
+        </div>
+        <div>
           <dt>Захист облікового запису</dt>
           <dd>Вхід можна захистити другим кроком (кодом із&nbsp;застосунку) і&nbsp;вказати резервну адресу на&nbsp;випадок, якщо забудете пароль.</dd>
         </div>
         <div>
-          <dt>Підтримка просто в&nbsp;браузері</dt>
-          <dd>Запитання або&nbsp;повідомлення про&nbsp;помилку надсилається з&nbsp;налаштувань, можна додати знімок екрана. Відповідь надходить туди&nbsp;ж.</dd>
+          <dt>Підтримка в&nbsp;браузері та&nbsp;на&nbsp;сайті</dt>
+          <dd>Запитання або&nbsp;повідомлення про&nbsp;помилку надсилається з&nbsp;налаштувань браузера або&nbsp;із&nbsp;сайту <a href="https://support.tabora.app/">support.tabora.app</a>, можна додати знімок екрана. На&nbsp;сайті написати можна й&nbsp;без&nbsp;облікового запису.</dd>
         </div>
       </dl>
     </section>
@@ -533,6 +557,7 @@ python3 tools/build.py run</code></pre>
   <p>Tabora&nbsp;— безкоштовний браузер із&nbsp;відкритим кодом на&nbsp;рушії Firefox. Firefox&nbsp;— торговельна марка Mozilla Foundation; Tabora не&nbsp;пов’язаний із&nbsp;Mozilla і&nbsp;не&nbsp;схвалений нею.</p>
   <ul>
     <li><a href="mailto:hello@tabora.app">hello@tabora.app</a></li>
+    <li><a href="https://support.tabora.app/">Підтримка</a></li>
     <li><a href="https://github.com/Tabora-App/browser">GitHub</a></li>
     <li><a href="https://github.com/Tabora-App/browser/blob/main/LICENSE">Ліцензія MPL&nbsp;2.0</a></li>
   </ul>

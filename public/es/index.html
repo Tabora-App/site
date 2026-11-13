@@ -182,6 +182,14 @@
               <dd>Los códigos de Google Authenticator, Aegis y&nbsp;2FAS se pasan con un código QR. Las contraseñas se importan con un archivo de otro navegador.</dd>
             </div>
             <div>
+              <dt>Claves de acceso en lugar de contraseñas</dt>
+              <dd>En los sitios que admiten claves de acceso no hace falta contraseña: basta con confirmar que eres tú. Las claves se guardan junto a&nbsp;las contraseñas.</dd>
+            </div>
+            <div>
+              <dt>Comprobación de contraseñas filtradas</dt>
+              <dd>El navegador compara tus contraseñas con una base de contraseñas robadas y&nbsp;te muestra cuáles conviene cambiar. Las contraseñas no salen de tu ordenador.</dd>
+            </div>
+            <div>
               <dt>Tu contraseña solo la conoces tú</dt>
               <dd>No se envía a&nbsp;nuestros servidores, así que ni siquiera nosotros podemos abrir tus contraseñas y&nbsp;códigos.</dd>
             </div>
@@ -275,7 +283,7 @@
       <div class="part-grid">
         <div class="part-text">
           <h2>Las mismas contraseñas y&nbsp;marcadores en tu segunda computadora</h2>
-          <p class="part-lead">Inicia sesión en tu cuenta en otra computadora y&nbsp;ahí aparecerán tus contraseñas, códigos de acceso, marcadores y&nbsp;la lista de pestañas abiertas.</p>
+          <p class="part-lead">Inicia sesión en tu cuenta en otra computadora y&nbsp;ahí aparecerán tus contraseñas, códigos de acceso, marcadores, historial y&nbsp;la lista de pestañas abiertas.</p>
           <dl class="points">
             <div>
               <dt>Los datos se cifran antes de enviarse</dt>
@@ -283,7 +291,11 @@
             </div>
             <div>
               <dt>Tú decides qué se sincroniza</dt>
-              <dd>Las contraseñas, los códigos, los marcadores y&nbsp;las pestañas se activan por separado. Puedes desactivar la sincronización y&nbsp;borrar la copia del servidor.</dd>
+              <dd>Las contraseñas, las claves de acceso, los códigos, los marcadores, las pestañas, el historial, las direcciones y&nbsp;los ajustes se activan por separado. Las tarjetas bancarias solo se sincronizan si lo activas tú. Puedes desactivar la sincronización y&nbsp;borrar la copia del servidor.</dd>
+            </div>
+            <div>
+              <dt>Envía una página a&nbsp;otro dispositivo</dt>
+              <dd>¿Encontraste un artículo en una computadora? Envíalo a&nbsp;otra y&nbsp;se abrirá allí solo.</dd>
             </div>
             <div>
               <dt>La billetera se queda en tu computadora</dt>
@@ -306,6 +318,10 @@
               <li class="alias">
                 <div class="alias-main"><b>Marcadores</b><span class="alias-meta">214 elementos</span></div>
                 <input type="checkbox" role="switch" class="switch" checked aria-label="Sincronizar los marcadores">
+              </li>
+              <li class="alias">
+                <div class="alias-main"><b>Historial</b><span class="alias-meta">páginas de los últimos dos meses</span></div>
+                <input type="checkbox" role="switch" class="switch" checked aria-label="Sincronizar el historial">
               </li>
               <li class="alias">
                 <div class="alias-main"><b>Pestañas y&nbsp;espacios</b><span class="alias-meta">ves lo que tienes abierto en la otra computadora</span></div>
@@ -428,12 +444,20 @@
           <dd>Las pestañas que llevas tiempo sin usar se pueden poner en reposo para que no ocupen memoria.</dd>
         </div>
         <div>
+          <dt>Grupos de pestañas y&nbsp;dos sitios lado a&nbsp;lado</dt>
+          <dd>Las pestañas se reúnen en grupos con nombre y&nbsp;color. Puedes abrir dos sitios lado a&nbsp;lado en una misma ventana.</dd>
+        </div>
+        <div>
+          <dt>Mudanza desde otro navegador</dt>
+          <dd>Los marcadores, el historial y&nbsp;las contraseñas se traen de Chrome, Safari, Edge y&nbsp;otros navegadores en un par de clics.</dd>
+        </div>
+        <div>
           <dt>Protección de la cuenta</dt>
           <dd>Puedes proteger el inicio de sesión con un segundo paso (un código de una app) y&nbsp;añadir un correo de respaldo por si olvidas la contraseña.</dd>
         </div>
         <div>
-          <dt>Soporte dentro del navegador</dt>
-          <dd>Puedes enviar una pregunta o&nbsp;un informe de error desde los ajustes y&nbsp;adjuntar una captura de pantalla. La respuesta llega ahí mismo.</dd>
+          <dt>Soporte en el navegador y&nbsp;en la web</dt>
+          <dd>Puedes enviar una pregunta o&nbsp;un informe de error desde los ajustes del navegador o&nbsp;desde <a href="https://support.tabora.app/">support.tabora.app</a>, y&nbsp;adjuntar una captura de pantalla. En el sitio puedes escribir incluso sin cuenta.</dd>
         </div>
       </dl>
     </section>
@@ -533,6 +557,7 @@ python3 tools/build.py run</code></pre>
   <p>Tabora es un navegador gratuito y&nbsp;de código abierto basado en el motor de Firefox. Firefox es una marca registrada de Mozilla Foundation; Tabora no está afiliado a&nbsp;Mozilla ni cuenta con su aprobación.</p>
   <ul>
     <li><a href="mailto:hello@tabora.app">hello@tabora.app</a></li>
+    <li><a href="https://support.tabora.app/">Soporte</a></li>
     <li><a href="https://github.com/Tabora-App/browser">GitHub</a></li>
     <li><a href="https://github.com/Tabora-App/browser/blob/main/LICENSE">Licencia MPL&nbsp;2.0</a></li>
   </ul>
