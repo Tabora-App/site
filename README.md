@@ -3,18 +3,19 @@
 The website of [Tabora](https://github.com/Tabora-App/browser), an ad-free browser with mail and a
 wallet built in: one page in four languages at [tabora.app](https://tabora.app).
 
-The site is static. It is built from one page template and translation dictionaries, and the built
+The site is static. It is built from page templates and translation dictionaries, and the built
 result is committed, so what is deployed is exactly what is in this repository.
 
 ## Layout
 
 | Path | Contents |
 |---|---|
-| `pages/index.html` | The page template. Its text is Russian, the source language: each phrase is a key of the dictionaries |
+| `pages/index.html` | The template of the landing page. Its text is Russian, the source language: each phrase is a key of the dictionaries |
+| `pages/privacy.html` | The template of the privacy policy (`/<lang>/privacy/`, and `/privacy/` in English): what the apps and the servers know about a person, where it is kept and how to delete it. Keep it in step with what the code really does |
 | `i18n/<lang>.json` | Translations: English, Ukrainian, Spanish |
 | `src/` | Scripts: the three.js scene of the first screen and small interactions |
 | `public/` | The built site, deployed as is: `/ru/`, `/en/`, `/uk/`, `/es/` and `/` (chosen by the browser language) |
-| `pages.mjs` | Page builder: translates the template, checks that every phrase is translated, that the markup is the same in all languages and that local links resolve |
+| `pages.mjs` | Page builder: translates the templates (the list is `PAGES` at its top), checks that every phrase is translated, that the markup is the same in all languages and that local links resolve. A link to another page of the site is written with the source language (`/ru/privacy/`) and follows the language of the page |
 | `build.sh`, `verify.sh`, `deploy.sh` | Build, reproducibility check, deployment |
 
 ## Build

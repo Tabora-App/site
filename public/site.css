@@ -1400,3 +1400,124 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---- A page of text (the privacy policy): one column of comfortable reading width ---- */
+@layer layout {
+  .doc {
+    width: min(100%, var(--page));
+    margin-inline: auto;
+    padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)) max(var(--gutter), env(safe-area-inset-right, 0px));
+  }
+}
+
+@layer parts {
+  .doc {
+    display: grid;
+    grid-template-columns: minmax(0, 42rem) minmax(0, 15rem);
+    column-gap: clamp(32px, 6vw, 96px);
+    justify-content: space-between;
+    align-items: start;
+    padding-block: clamp(24px, 5vw, 64px) 0;
+    line-height: 1.6;
+  }
+
+  .doc-head {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 18px;
+    margin-bottom: clamp(32px, 5vw, 56px);
+  }
+
+  /* the heading is one long word in some languages: it must fit a phone in one line */
+  .doc-head h1 {
+    font-size: clamp(1.875rem, 1.1rem + 3.4vw, 3.25rem);
+    overflow-wrap: break-word;
+  }
+
+  .doc-date {
+    font-size: 0.875rem;
+    color: var(--ink-2);
+  }
+
+  .doc section {
+    grid-column: 1;
+    display: grid;
+    gap: 14px;
+    min-width: 0;
+    padding-block: 26px;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 16px;
+  }
+
+  .doc section h2 {
+    max-width: none;
+    font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .doc section ul {
+    display: grid;
+    gap: 10px;
+  }
+
+  .doc section li {
+    position: relative;
+    padding-left: 1.4em;
+  }
+
+  .doc section li::before {
+    content: "";
+    position: absolute;
+    left: 0.25em;
+    top: 0.62em;
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 50%;
+    background: var(--ink-2);
+  }
+
+  .doc section a {
+    text-underline-offset: 0.18em;
+  }
+
+  /* the contents: beside the text on a wide screen, above it on a narrow one */
+  .doc-toc {
+    grid-column: 2;
+    grid-row: 2 / span 20;
+    position: sticky;
+    top: 24px;
+    font-size: 0.875rem;
+  }
+
+  .doc-toc ol {
+    display: grid;
+    gap: 8px;
+    padding-left: 16px;
+    border-left: 1px solid var(--line);
+  }
+
+  .doc-toc a {
+    color: var(--ink-2);
+    text-decoration: none;
+  }
+
+  .doc-toc a:hover,
+  .doc-toc a:focus-visible {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 860px) {
+    .doc {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .doc-toc {
+      grid-column: 1;
+      grid-row: auto;
+      position: static;
+      margin-bottom: 28px;
+    }
+  }
+}
