@@ -1,6 +1,7 @@
 // Pages of the tabora.app site in four languages, built from Russian templates (PAGES below): pages/index.html
-// -> public/<lang>/index.html, pages/privacy.html -> public/<lang>/privacy/index.html, and a copy of each English
-// page without the language in its path (public/index.html, public/privacy/index.html) for visitors who reach
+// -> public/<lang>/index.html, pages/privacy.html -> public/<lang>/privacy/index.html, pages/terms.html ->
+// public/<lang>/terms/index.html, and a copy of each English page without the language in its path
+// (public/index.html, public/privacy/index.html, public/terms/index.html) for visitors who reach
 // it without the language redirect (nginx does it for "/" by Accept-Language).
 //
 // Translations live in i18n/<lang>.json; the key is the Russian text from the template, as in the app dictionaries.
@@ -28,6 +29,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const PAGES = [
   { template: "pages/index.html", slug: "" },
   { template: "pages/privacy.html", slug: "privacy/" },
+  { template: "pages/terms.html", slug: "terms/" },
 ];
 const ORIGIN = "https://tabora.app";
 const SOURCE = "ru";

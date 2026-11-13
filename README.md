@@ -12,6 +12,7 @@ result is committed, so what is deployed is exactly what is in this repository.
 |---|---|
 | `pages/index.html` | The template of the landing page. Its text is Russian, the source language: each phrase is a key of the dictionaries |
 | `pages/privacy.html` | The template of the privacy policy (`/<lang>/privacy/`, and `/privacy/` in English): what the apps and the servers know about a person, where it is kept and how to delete it. Keep it in step with what the code really does |
+| `pages/terms.html` | The template of the terms of use (`/<lang>/terms/`, and `/terms/` in English): the rules of the account and the mail, what the wallet and the agent do not promise, how an account is closed. |
 | `i18n/<lang>.json` | Translations: English, Ukrainian, Spanish |
 | `src/` | Scripts: the three.js scene of the first screen and small interactions |
 | `public/` | The built site, deployed as is: `/ru/`, `/en/`, `/uk/`, `/es/` and `/` (chosen by the browser language) |
